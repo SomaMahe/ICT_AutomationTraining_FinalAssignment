@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Ajio Test Suite">
+    <listeners>
+        <listener class-name="TestListener"></listener>
+    </listeners>
+    <parameter name="chromebrowser" value="chrome"></parameter>
+    <parameter name="firefoxbrowser" value="firefox"></parameter>
+    <parameter name="url" value="https://www.ajio.com/"></parameter>
+    <test verbose="2" preserve-order="true" name="AjioTesting">
+        <parameter name="searchAvailableText" value="shoes"></parameter>
+        <parameter name="searchUnavailableText" value="XYZ"></parameter>
+        <parameter name="searchBrand" value="PUMA"></parameter>
+        <parameter name="subCategory1" value="Jeans"></parameter>
+        <parameter name="subCategory2" value="Shirts"></parameter>
+        <classes>
+
+            <class name="AjioTestCases"></class>
+            <class name="Reports"></class>
+        </classes>
+
+    </test>
+
+
+</suite>
